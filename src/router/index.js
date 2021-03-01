@@ -7,6 +7,14 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: '*',
+    redirect: '/books'
+  },
+  {
+    path: '/',
+    redirect: '/books'
+  },
+  {
     path: '/books',
     name: 'Books',
     component: Books,
@@ -21,8 +29,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  mode: 'hash',
   routes
 });
 
