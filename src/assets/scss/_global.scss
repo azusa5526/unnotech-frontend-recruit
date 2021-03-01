@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+// Global
+#app {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+}
+
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+.row-limit-1 {
+  @include row-limiter(1);
+}
+
+.card-image {
+  height: 300px;
+  @include media-breakpoint-up(md) {
+    height: 400px;
+  }
+  @include object-fit(contain, center);
+}
+
+.cardHover {
+  a {
+    transform: scale(1);
+    transition: ease-out;
+    transition-duration: 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+      transition: ease-out;
+      transition-duration: 0.2s;
+      box-shadow: $box-shadow;
+    }
+  }
+}

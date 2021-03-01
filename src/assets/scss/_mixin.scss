@@ -1,0 +1,14 @@
+@mixin row-limiter($row) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+@mixin object-fit($size, $position) {
+  object-fit: $size;
+  object-position: $position;
+}

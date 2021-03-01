@@ -1,0 +1,12 @@
+.books {
+  .intro {
+    min-height: 80px;
+  }
+
+  .adjustMargin {
+    margin-bottom: 230px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 160px;
+    }
+  }
+}

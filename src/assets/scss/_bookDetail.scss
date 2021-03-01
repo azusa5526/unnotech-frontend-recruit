@@ -1,0 +1,19 @@
+.bookDetail {
+  position: fixed;
+  bottom: 0;
+  transition: all 0.2s ease-in-out;
+
+  .price,
+  .quantity {
+    white-space: nowrap;
+    max-height: 35px;
+
+    input {
+      max-width: 150px;
+    }
+
+    button {
+      width: 35px;
+    }
+  }
+}
