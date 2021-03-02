@@ -72,6 +72,7 @@ export default {
       this.$http.get(api).then((response) => {
         this.book = response.data;
       });
+      console.log('this book is', this.book);
     },
 
     getBookDetail() {
@@ -123,8 +124,8 @@ export default {
 
   watch: {
     $route(to, from) {
-      this.getBook();
       this.bookId = this.$route.params.bookId;
+      this.getBook();
     },
 
     bookId(to, from) {
